@@ -1,7 +1,19 @@
-{% extends "layout.html" %} {% block body %}
-<div class="container-fluid">
-    <div class="row">
-        
+{% block css %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/about.css') }}"> {% endblock %} {% extends "layout.html" %} {% block body %}
+<div id="about" class="container-fluid vertical-align text-center head-pad tp-background">
+ 
+    <!--header wrapper-->
+</div>
+<div id="about" class="container-fluid bg1">
+    <h3>ABOUT THE CUBE</h3>
+    <div class="container-fluid line-separator"></div>
+    <!--line -->
+    <div class="row col-md-8 col-md-offset-2 text-center pad-top">
+        <div class="pad-bottom">
+            <p>The Cube is Duke’s student-run, entrepreneurial residential community located at 205 Oregon Street. We yearn to make a difference, are driven to execute upon and deliver great ideas and are dedicated to learning and growing.</p>
+            <h3>What do we expect from our members?</h3>
+            <p>Produce a product or service that is iterable and can be brought to the general market, whether via non-profit or for-profit venture. The Cube is also dedicated to promoting entrepreneurship of any form within the community and on Duke’s campus, including social ventures.</p>
+        </div>
     </div>
 </div>
-{% endblock %} 
+{% endblock %}

@@ -16,3 +16,7 @@ function render() {
     renderer.render(scene, camera);
 };
 render();
+
+
+//fade in title text
+//$(".title").fadeIn(1000);

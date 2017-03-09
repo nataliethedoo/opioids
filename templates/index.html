@@ -1,4 +1,10 @@
 {% extends "layout.html" %} {% block body %}
-
+<div class="container-fluid">
+    <div class="row">
+        <div id="maintitle" class="title">The Cube <img id = "logo_mask" src="/static/images/logo_mask_small.png"></div>
+        <div id="subtitle" class="title">Duke's entrepreneur SLG</div>
+    </div>
+</div>
+{% endblock %} {% block scripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/cube.js') }}"></script>
 {% endblock %}
-

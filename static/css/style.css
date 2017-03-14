@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 body {
     background-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .title {
@@ -10,12 +12,12 @@ body {
 
 #maintitle {
     margin-top: 5%;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
 }
 
 #subtitle {
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(255, 255, 255, 0.5) !important;
 }
 
@@ -156,11 +158,11 @@ nav li:nth-of-type(1) {
 }
 
 nav li:nth-of-type(2) {
-    background-color: #EA495F
+    background-color: #00009b
 }
 
 nav li:nth-of-type(3) {
-    background-color: #F4837D
+    background-color: #56a0d3
 }
 
 nav li:nth-of-type(4) {

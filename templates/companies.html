@@ -1,0 +1,33 @@
+{% block css %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/companies.css') }}"> {% endblock %}
+<!--html-->
+{% extends "layout.html" %} {% block body %}
+<div class="container-fluid">
+    <h1 class="white">NOTABLE STARTUPS & ALUMNI</h1>
+    <br>
+    <div class="row">
+        <div class='card'>
+            <h1>
+    Tatiana Birgisson
+  </h1>
+            <img src='/static/images/tatiana.jpg'>
+            <p class='bio'>
+                Tatiana founded <a href="https://www.matienergy.com/">MATI Energy</a>, a healthy energy drink company. She has been featured in CNN, Forbes, ABS news and USA today. She is on Inc 30 under 30 list of 2016 and Forbes 30 under 30 Food & Drink list of 2017.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class='card'>
+            <h1>
+    Josh Miller
+  </h1>
+            <img src='/static/images/joshmiller.jpg'>
+            <p class='bio'>
+                Josh Miller founded <a href="http://farmshots.com/">Farmshots</a>, a company that analyzes satellite imagery of farms to provide aitomated pest and disease detection for farmers. 
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!--javascripts-->
+{% block scripts %} {% endblock %}

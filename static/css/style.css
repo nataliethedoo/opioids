@@ -336,6 +336,7 @@ Animation keyframes
     }
 }
 
+/*
 .home a {
     font-family: "Work Sans", sans-serif;
     color: #222;
@@ -349,7 +350,7 @@ Animation keyframes
     left: 50px;
     padding-bottom: 3px;
     border-bottom: 1px solid #222;
-}
+}*/
 
 @media (max-width: 640px) {
     nav ul {

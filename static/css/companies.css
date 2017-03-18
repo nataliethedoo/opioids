@@ -9,7 +9,8 @@
 }
 
 .card {
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   margin: 20px auto 10px auto;
   background-color: #fff;
   color: #444;
@@ -22,14 +23,14 @@
   font-family: Raleway;
   font-weight: 700;
   font-size: 22px;
-  background-color: #5FD9FF;
+  background-color: #56a0d3;
   animation: fadein 1.2s;
   color: #fff;
 }
 .card img {
   float: left;
   width: auto;
-  height: 140px;
+  height: 20%;
   margin: 20px;
   position: relative;
   z-index: 1;

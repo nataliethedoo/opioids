@@ -1,6 +1,5 @@
 {% block css %}
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/companies.css') }}"> 
-{% endblock %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/companies.css') }}"> {% endblock %}
 <!--html-->
 {% extends "layout.html" %} {% block body %}
 <div class="container-fluid">
@@ -42,6 +41,17 @@
                 <img src='/static/images/arun.jpg'>
                 <p class='bio'>
                     Arun Karottu cofounded <a href="http://www.smartmetalsrecycling.com">Smart Metals Recycling</a>, a company that uses technology to streamline e-waste recycling and mine customer data for insights.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class='card'>
+                <h1>Sid Kandan</h1>
+                <img src='/static/images/sid.png'>
+                <p class='bio'>
+                    Sid Kandan founded <a href="http://www.stel.life/">Stel</a>, a company that produces IoT devices that automate manual data collection processes to help hospitals provide quality care.
                 </p>
             </div>
         </div>

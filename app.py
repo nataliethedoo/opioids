@@ -20,7 +20,7 @@ def about():
 def apply():
 	return render_template('apply.html')
 
-@app.route("/companies")
+@app.route("/alum")
 def companies():
 	return render_template('companies.html')
 

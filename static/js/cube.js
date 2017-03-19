@@ -3,11 +3,11 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("cube").appendChild(renderer.domElement);
-var geometry = new THREE.BoxGeometry(650, 650, 650, 10, 10, 10);
+var geometry = new THREE.BoxGeometry(500, 500, 500, 10, 10, 10);
 var material = new THREE.MeshBasicMaterial({ color: 0xfffff, wireframe: true });
 var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
-camera.position.z = 1000;
+camera.position.z =950;
 
 function render() {
     requestAnimationFrame(render);

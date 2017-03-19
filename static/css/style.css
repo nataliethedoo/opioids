@@ -3,6 +3,7 @@ body {
     background-color: black;
     font-family: 'Roboto Condensed', sans-serif;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .title {
@@ -15,15 +16,21 @@ body {
     margin-top: 5%;
     font-size: 50px;
     font-weight: bold;
+    z-index: 1;
 }
 
 #subtitle {
     font-size: 25px;
     color: rgb(255, 255, 255, 0.5) !important;
+    z-index: 10;
 }
 
+#cubeRow{
+    text-align: center;
+    margin: 0 auto;
+}
 #cube {
-    width: 100%;
+    z-index: -10;
 }
 
 

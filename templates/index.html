@@ -1,18 +1,19 @@
 {% extends "layout.html" %} {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="buzz_wrapper">
-                <div class="text">
-                    <span><div id="msg"/></span>
-                </div>
-                <div class="scanline"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="buzz_wrapper">
+            <div class="text">
+                <span><div id="msg"/></span>
             </div>
-            <div id="maintitle" class="title">The Cube <img id="logo_mask" src="/static/images/logo_mask_small.png"></div>
-            <div id="subtitle" class="title">Duke's entrepreneur SLG</div>
+            <div class="scanline"></div>
+        </div>
+        <div id="maintitle" class="title">The Cube <img id="logo_mask" src="/static/images/logo_mask_small.png"></div>
+        <div id="subtitle" class="title">Duke's Entrepreneurship SLG</div>
+        <div class="row" id="cubeRow">
             <div id="cube"></div>
         </div>
     </div>
-{% endblock %} 
-{% block scripts %}
+</div>
+{% endblock %} {% block scripts %}
 <script type="text/javascript" src="{{ url_for('static', filename='js/cube.js') }}"></script>
 {% endblock %}

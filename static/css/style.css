@@ -10,6 +10,12 @@ body {
     text-align: center;
     color: white;
     z-index: 1;
+    -vendor-animation-duration: 5s;
+    
+}
+
+#logo_mask{
+    -vendor-animation-duration: 10s;
 }
 
 #maintitle {

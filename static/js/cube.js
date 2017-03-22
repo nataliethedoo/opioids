@@ -7,7 +7,8 @@ var geometry = new THREE.BoxGeometry(500, 500, 500, 10, 10, 10);
 var material = new THREE.MeshBasicMaterial({ color: 0xfffff, wireframe: true });
 var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
-camera.position.z =950;
+camera.position.z = 950;
+
 
 function render() {
     requestAnimationFrame(render);
@@ -15,8 +16,16 @@ function render() {
     cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 };
-render();
+$(".title").hide();
+$(document).ready(function() {
+	$(".title").show();
+    $(".title").addClass("animated flipInX");
+    $("#logo_mask").addClass("animated zoomIn");
 
+
+
+    render();
+})
 
 //fade in title text
 //$(".title").fadeIn(1000);

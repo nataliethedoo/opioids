@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     triggerAnimation();
-/*
+
     render(0.001);
 
     setTimeout(function() {
@@ -15,7 +15,7 @@ $(document).ready(function() {
         });
 
     }, 1000)
-*/
+
 });
 
 function makeContentVisible() {

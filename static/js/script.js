@@ -10,7 +10,7 @@ $(document).ready(function() {
             cancelAnimationFrame(cubeAnimationID);
             titleIn();
             //$("#cubeRow").remove();
-            //appendParticles();
+            appendParticles();
             addContent();
         });
 

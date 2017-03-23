@@ -14,7 +14,14 @@ body {
 }
 
 .mycontent {
+    display: none;
+    margin-left: 1%;
+    margin-right: 1%;
     color: white;
+}
+
+.resourcetitle{
+    text-align: center;
 }
 
 .title {
@@ -30,7 +37,7 @@ body {
 
 #maintitle {
     margin-top: 5%;
-    font-size: 7em;
+    font-size: 6em;
     font-weight: bold;
     z-index: 1;
 }
@@ -212,6 +219,7 @@ Burger king
     width: 34px;
     display: block;
     cursor: pointer;
+    /*pointer-events: auto;*/
 }
 
 .open-overlay span {

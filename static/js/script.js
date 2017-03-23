@@ -1,7 +1,21 @@
 $(document).ready(function() {
 
     triggerAnimation();
+/*
+    render(0.001);
 
+    setTimeout(function() {
+
+        $("#cube").fadeOut(1000, function() {
+            cancelAnimationFrame(cubeAnimationID);
+            titleIn();
+            //$("#cubeRow").remove();
+            //appendParticles();
+            addContent();
+        });
+
+    }, 1000)
+*/
 });
 
 function makeContentVisible() {
@@ -24,6 +38,7 @@ function triggerAnimation() {
 
 /*------nav bar---------*/
 $('.open-overlay').click(function() {
+    console.log("OPen overlay clicked");
     $('.open-overlay').css('pointer-events', 'none');
     var overlay_navigation = $('.overlay-navigation'),
         top_bar = $('.bar-top'),

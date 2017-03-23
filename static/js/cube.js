@@ -19,9 +19,13 @@ function render(speed) {
     increment += speed;
     renderer.render(scene, camera);
 };
+/*
 $(".title").hide();
-$(".content").hide()
+$(".content").hide();
+*/
+/*
 $(document).ready(function() {
+    triggerAnimation();
 
     render(0.001);
 
@@ -30,22 +34,23 @@ $(document).ready(function() {
         $("#cube").fadeOut(1000, function() {
             cancelAnimationFrame(cubeAnimationID);
             titleIn();
-            $("#cubeRow").remove();
-            appendParticles();
+            //$("#cubeRow").remove();
+            //appendParticles();
+            addContent();
         });
 
-    }, 1700)
-})
+    }, 1000)
+})*/
 
 function titleIn() {
-    $(".title").show();
+    //$(".title").css("visibility","visible");
     $(".title").addClass("animated flipInX");
     $("#logo_mask").addClass("animated zoomIn");
 }
 
 function appendParticles() {
-    $('body').prepend('<div id="particles-js">');
-    $('body').append('</div>');
+    $('.home').prepend('<div id="particles-js">');
+    $('.home').append('</div>');
     particlesJS("particles-js", {
         "particles": {
             "number": {
@@ -159,9 +164,9 @@ function appendParticles() {
 }
 
 
-function addContent(){
-	$(".content").show();
-	$(".content").addClass("animated bounceInDown");
-	
-	$(".resourcetitle").addClass("animated bounceInDown");
+function addContent() {
+    $(".mycontent").css("display", "block");
+    $(".mycontent").addClass("animated bounceInDown");
+
+    $(".resourcetitle").addClass("animated bounceInDown");
 }

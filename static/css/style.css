@@ -6,35 +6,46 @@ body {
     overflow-y: hidden;
 }
 
+#particles-js canvas {
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+}
+
+.mycontent {
+    color: white;
+}
+
 .title {
     text-align: center;
     color: white;
     z-index: 1;
     -vendor-animation-duration: 5s;
-    
 }
 
-#logo_mask{
+#logo_mask {
     -vendor-animation-duration: 10s;
 }
 
 #maintitle {
     margin-top: 5%;
-    font-size: 50px;
+    font-size: 7em;
     font-weight: bold;
     z-index: 1;
 }
 
 #subtitle {
-    font-size: 25px;
+    font-size: 4em;
     color: rgb(255, 255, 255, 0.5) !important;
     z-index: 10;
 }
 
-#cubeRow{
+#cubeRow {
     text-align: center;
     margin: 0 auto;
 }
+
 #cube {
     z-index: -10;
 }
@@ -46,6 +57,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    z-index: -2;
 }
 
 
@@ -177,7 +189,6 @@ nav li:nth-of-type(2) {
 
 nav li:nth-of-type(3) {
     background-color: #2B50B7
-
 }
 
 nav li:nth-of-type(4) {
@@ -349,6 +360,7 @@ Animation keyframes
         background-color: #fff;
     }
 }
+
 
 /*
 .home a {

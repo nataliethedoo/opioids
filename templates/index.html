@@ -12,8 +12,23 @@
         <div class="row" id="cubeRow">
             <div id="cube"></div>
         </div>
+        <div class="row mycontent">
+            <div class="col-md-4 resource">
+                <h1 class="resourcetitle">Mentorship</h1>
+                <p>The Cube has an extensive <a href="/alum">alumni</a> network that have advised undergraduate Cube members in building their own companies.</p>
+            </div>
+            <div class="col-md-4 resource">
+                <h1 class="resourcetitle">Resources</h1>
+                <p>Duke holds a startup challenges and has the Melissa & Dough Entrepreneurship program, both of which a number of Cube members have participated in.</p>
+            </div>
+            <div class="col-md-4 resource">
+                <h1 class="resourcetitle">Entrepreneur Community</h1>
+                <p>We are a community of economists, business developers, engineers, computer scientists, and more. We support each other whether that be through technical help for a new startup idea or simply advice on how to approach implementation.</p>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %} {% block scripts %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/cube.js') }}"></script>
 {% endblock %}

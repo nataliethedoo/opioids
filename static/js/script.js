@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     triggerAnimation();
-    localStorage.removeItem("first_time");
+    //localStorage.removeItem("first_time");
     var firstTime = localStorage.getItem("first_time");
     if (!firstTime) {
         // first time loaded!
@@ -27,6 +27,13 @@ $(document).ready(function() {
 
 function makeContentVisible() {
 
+}
+
+function initialContent() {
+    titleIn();
+    //$("#cubeRow").remove();
+    appendParticles();
+    addContent();
 }
 
 function triggerAnimation() {

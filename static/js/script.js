@@ -1,20 +1,27 @@
 $(document).ready(function() {
 
     triggerAnimation();
+    localStorage.removeItem("first_time");
+    var firstTime = localStorage.getItem("first_time");
+    if (!firstTime) {
+        // first time loaded!
+        localStorage.setItem("first_time", "1");
 
-    render(0.001);
+        render(0.001);
 
-    setTimeout(function() {
+        setTimeout(function() {
 
-        $("#cube").fadeOut(1000, function() {
-            cancelAnimationFrame(cubeAnimationID);
-            titleIn();
-            //$("#cubeRow").remove();
-            appendParticles();
-            addContent();
-        });
+            $("#cube").fadeOut(1000, function() {
+                cancelAnimationFrame(cubeAnimationID);
+                initialContent();
+            });
 
-    }, 1000)
+        }, 1000);
+    } else {
+        $("#cube").remove();
+        initialContent();
+
+    }
 
 });
 

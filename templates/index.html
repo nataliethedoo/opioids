@@ -31,4 +31,32 @@
 {% endblock %} {% block scripts %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/cube.js') }}"></script>
+<script>
+$(document).ready(function() {
+
+    triggerAnimation();
+    //localStorage.removeItem("first_time");
+    var firstTime = localStorage.getItem("first_time");
+    if (!firstTime) {
+        // first time loaded!
+        localStorage.setItem("first_time", "1");
+
+        render(0.001);
+
+        setTimeout(function() {
+
+            $("#cube").fadeOut(1000, function() {
+                cancelAnimationFrame(cubeAnimationID);
+                initialContent();
+            });
+
+        }, 1000);
+    } else {
+        $("#cube").remove();
+        initialContent();
+
+    }
+
+});
+</script>
 {% endblock %}

@@ -1,29 +1,4 @@
-$(document).ready(function() {
 
-    triggerAnimation();
-    //localStorage.removeItem("first_time");
-    var firstTime = localStorage.getItem("first_time");
-    if (!firstTime) {
-        // first time loaded!
-        localStorage.setItem("first_time", "1");
-
-        render(0.001);
-
-        setTimeout(function() {
-
-            $("#cube").fadeOut(1000, function() {
-                cancelAnimationFrame(cubeAnimationID);
-                initialContent();
-            });
-
-        }, 1000);
-    } else {
-        $("#cube").remove();
-        initialContent();
-
-    }
-
-});
 
 function makeContentVisible() {
 

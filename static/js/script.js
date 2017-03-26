@@ -7,7 +7,7 @@ function initialContent() {
     //$("#cubeRow").remove();
     appendParticles();
     addContent();
-    //addSquares(8, 3);
+    addSquares(6, 3);
     addGear();
 }
 

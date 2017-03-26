@@ -418,6 +418,8 @@ Animation keyframes
 #squarehere{
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 150px;
+    padding-left: 50px;
 }
 #coolsquares{
     position: relative;
@@ -426,6 +428,7 @@ Animation keyframes
 }
 .squarebox {
     position: absolute;
+    padding-bottom: 50px;
 }
 
 .square {

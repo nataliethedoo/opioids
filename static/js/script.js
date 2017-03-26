@@ -1,5 +1,3 @@
-
-
 function makeContentVisible() {
 
 }
@@ -9,6 +7,23 @@ function initialContent() {
     //$("#cubeRow").remove();
     appendParticles();
     addContent();
+    addSquares(8,2);
+}
+
+function addSquares(columns = 5, rows = 5) {
+    var html = '<div class="squarebox">';
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < columns; j++) {
+            if (j % (columns+1) == 0) {
+                html = html + '</br>';
+            } else {
+                html = html +
+                    '<div class="square"><div class="squarecut"></div></div>';
+            }
+        }
+    }
+    html = html + "</div>"
+    $("#squarehere").append(html);
 }
 
 function triggerAnimation() {

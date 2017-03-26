@@ -193,4 +193,8 @@ $('.open-overlay').click(function() {
             }
         })
     }
-})
+});
+
+function email(){
+    window.open('mailto:dukethecube@gmail.com');
+}

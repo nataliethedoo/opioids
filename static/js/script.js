@@ -7,14 +7,15 @@ function initialContent() {
     //$("#cubeRow").remove();
     appendParticles();
     addContent();
-    addSquares(8,2);
+    //addSquares(8, 3);
+    addGear();
 }
 
 function addSquares(columns = 5, rows = 5) {
     var html = '<div class="squarebox">';
     for (var i = 0; i < rows; i++) {
         for (var j = 0; j < columns; j++) {
-            if (j % (columns+1) == 0) {
+            if (j % (columns + 1) == 0) {
                 html = html + '</br>';
             } else {
                 html = html +
@@ -24,6 +25,86 @@ function addSquares(columns = 5, rows = 5) {
     }
     html = html + "</div>"
     $("#squarehere").append(html);
+}
+
+function addGear() {
+    var html =
+        "<div class='clock'>" +
+        "<div class='clock__mask'></div>" +
+        "<div class='gears'>" +
+        "<div class='gear--standard'>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "</div>" +
+        "<div class='gear--reverse'>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "<div class='gear__peg'></div>" +
+        "</div>" +
+        "<div class='gear--large'>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "</div>" +
+        "</div>" +
+        "<div class='gears'>" +
+        "<div class='gear--large cornered'>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "</div>" +
+        "<div class='gear--large cornered'>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "<div class='gear__peg--large'></div>" +
+        "</div>" +
+        "</div>" +
+        "</div>";
+
+    $("#gear").append(html);
 }
 
 function triggerAnimation() {

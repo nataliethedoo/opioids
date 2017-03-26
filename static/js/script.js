@@ -9,6 +9,16 @@ function initialContent() {
     addContent();
     addSquares(6, 3);
     addGear();
+    addCoolCube();
+}
+
+function addCoolCube() {
+    var html = "<div class='ccube'>" +
+        "<div class='top'></div>" +
+        "<div class='bottom'></div>" +
+        "</div>";
+
+    $("#coolcube").append(html);
 }
 
 function addSquares(columns = 5, rows = 5) {

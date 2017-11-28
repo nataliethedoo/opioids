@@ -1,44 +1,44 @@
 {% extends "layout.html" %} {% block body %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="buzz_wrapper">
-            <div class="text">
-                <span><div id="msg"/></span>
-            </div>
-            <div class="scanline"></div>
-        </div>
-        <div id="maintitle" class="title">The Cube <img id="logo_mask" src="/static/images/logo_mask_small.png"></div>
-        <div id="subtitle" class="title">Duke's Entrepreneurship SLG</div>
-        <div class="row" id="cubeRow">
-            <div id="cube"></div>
-        </div>
-        <div class="row mycontent">
-            <div class="row">
-                <div class="col-md-4 resource">
-                    <div class="row">
-                        <div id="coolcube"></div>
-                    </div>
-                    <h1 class="resourcetitle"><br>Mentorship</h1>
-                    <p>The Cube has an extensive <a href="/alum">alumni</a> network that have advised undergraduate Cube members in building their own companies.</p>
-                </div>
-                <div class="col-md-4 resource">
-                    <div class="row">
-                        <div id="gear"></div>
-                    </div>
-                    <h1 class="resourcetitle"><br>Resources</h1>
-                    <p>Duke holds a startup challenges and has the Melissa & Doug Entrepreneurship program, both of which a number of Cube members have participated in.</p>
-                </div>
-                <div class="col-md-4 resource">
-                    <div class="row">
-                        <div id="squarehere"></div>
-                    </div>
-                    <h1 class="resourcetitle"><br>Community</h1>
-                    <p>We are a community of economists, business developers, engineers, computer scientists, and more. We support each other whether that be through technical help for a new startup idea or simply advice on how to approach implementation.</p>
-                </div>
-            </div>
-            {% include 'contact.html' %}
-        </div>
+  <div class="row">
+    <div class="buzz_wrapper">
+      <div class="text">
+        <span><div id="msg"/></span>
+      </div>
+      <div class="scanline"></div>
     </div>
+    <div id="maintitle" class="title">The Cube <img id="logo_mask" src="/static/images/logo_mask_small.png"></div>
+    <div id="subtitle" class="title">Duke's Entrepreneurship SLG</div>
+    <div class="row" id="cubeRow">
+      <div id="cube"></div>
+    </div>
+    <div class="row mycontent">
+      <div class="row">
+        <div class="col-md-4 resource">
+          <div class="row">
+            <div id="coolcube"></div>
+          </div>
+          <h1 class="resourcetitle"><br>Mentorship</h1>
+          <p>The Cube has an extensive <a href="/alum">alumni</a> network that have advised undergraduate Cube members in building their own companies.</p>
+        </div>
+        <div class="col-md-4 resource">
+          <div class="row">
+            <div id="gear"></div>
+          </div>
+          <h1 class="resourcetitle"><br>Resources</h1>
+          <p>Duke holds a startup challenges and has the Melissa & Doug Entrepreneurship program, both of which a number of Cube members have participated in.</p>
+        </div>
+        <div class="col-md-4 resource">
+          <div class="row">
+            <div id="squarehere"></div>
+          </div>
+          <h1 class="resourcetitle"><br>Community</h1>
+          <p>We are a community of economists, business developers, engineers, computer scientists, and more. We support each other whether that be through technical help for a new startup idea or simply advice on how to approach implementation.</p>
+        </div>
+      </div>
+      {% include 'contact.html' %}
+    </div>
+  </div>
 
 </div>
 {% endblock %} {% block scripts %}
@@ -46,30 +46,25 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/cube.js') }}"></script>
 <script>
 $(document).ready(function() {
+  triggerAnimation();
+  //localStorage.removeItem("first_time");
+  var firstTime = localStorage.getItem("first_time");
+  if (!firstTime) {
+    // first time loaded!
+    localStorage.setItem("first_time", "1");
 
-    triggerAnimation();
-    //localStorage.removeItem("first_time");
-    var firstTime = localStorage.getItem("first_time");
-    if (!firstTime) {
-        // first time loaded!
-        localStorage.setItem("first_time", "1");
+    render(0.001);
 
-        render(0.001);
-
-        setTimeout(function() {
-
-            $("#cube").fadeOut(1000, function() {
-                cancelAnimationFrame(cubeAnimationID);
-                initialContent();
-            });
-
-        }, 1000);
-    } else {
-        $("#cube").remove();
+    setTimeout(function() {
+      $("#cube").fadeOut(1000, function() {
+        cancelAnimationFrame(cubeAnimationID);
         initialContent();
-
-    }
-
+      });
+    }, 1000);
+  } else {
+    $("#cube").remove();
+    initialContent();
+  }
 });
 </script>
 {% endblock %}

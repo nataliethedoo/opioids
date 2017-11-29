@@ -9,4 +9,6 @@ Then:
 Deployed at:
 [http://in-cube.herokuapp.com/](http://in-cube.herokuapp.com/)
 
+[http://app.dukethecube.com](http://app.dukethecube.com)
+
 

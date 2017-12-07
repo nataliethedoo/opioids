@@ -31,7 +31,7 @@
 
 
   <body>
-    
+    <div class="alert alert-danger">Please fill in all required fields</div>
     <div class="container-fluid" style="height:20%; background-color: #DCDCDC; border-radius: 10px">
 
       <h1>Opioid Risk Predictor</h1>
@@ -44,25 +44,25 @@
       <div class="my-row">
 
         <div class="col-lg-4" style="background-color: #c9f0f2; border-radius: 10px">
-          <form action="getData" method="get">
           <h3>Personal Information</h3>
-            <p> For new patients </p>
-          <div class="input-group">
+          <p> For new patients </p>
+          <div class="form-group">
             <label for="first-name">First Name</label>
-            <input type="text" name="first-name" class="form-control" placeholder="First Name">
+            <input type="text" class="form-control" name="first-name" placeholder="First Name">
           </div>
-          <div class="input-group">
+          <div class="form-group">
             <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" class="form-control" placeholder="Last Name">
+            <input type="text" class="form-control" name="last-name" placeholder="Last Name">
           </div>
           <br></br>
           <br></br>
           <br></br>
-          <br></br>
+    
         </div>
         
         <div class="col-lg-4">
           <h3>Demographic Information</h3>
+          <form action="getData" method="get">
             <div class="form-group">
               <div class="input-group">
                 <select id="age" name="age" class="selectpicker form-control"> 
@@ -135,7 +135,7 @@
           <div class="input-group">
             <input name="zip" type="text" class="form-control" placeholder="Enter Zip Code">
           </div>
-        </div>  
+          <br></br>
 <!--          <p></p>
           
          <div class="form-group">
@@ -163,26 +163,28 @@
               </select> 
             </div>
           </div> -->
+
+        </div>
       
 
 
         <div class="col-lg-4" style="background-color: #c9f0f2; border-radius: 10px">
           <h3>Prescription Parameters</h3>
           <p>Morphine Equivalents</p>
-          <p> &thinsp; 0 &emsp; &ensp; 5 &emsp; &ensp; 10 &emsp; &ensp; 15 &emsp; &nbsp; 20 &emsp; &thinsp; 25 &emsp; &thinsp; 30 &emsp; &thinsp; 35 &emsp; &thinsp; 40 &emsp; 45 &emsp; &thinsp; 50</p>
-          <input name="morphine" type="range", min="0", max="50", list="tickmarks">
+          <p> &thinsp; 0 &emsp; &ensp; &thinsp; 1 &emsp; &ensp; &thinsp; 2 &emsp; &ensp; &thinsp; 3 &emsp; &ensp; &thinsp; 4 &emsp; &ensp; &thinsp; 5 &emsp; &ensp; &thinsp; 6 &emsp; &ensp; &thinsp; 7 &emsp; &ensp; &thinsp; 8 &emsp; &ensp; &thinsp; 9 &emsp; &ensp;10</p>
+          <input name="morphine" type="range", min="0", max="10", list="tickmarks">
           <datalist id="tickmarks">
             <option value="0">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
             <option value="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
             <option value="10">
-            <option value="15">
-            <option value="20">
-            <option value="25">
-            <option value="30">
-            <option value="35">
-            <option value="40">
-            <option value="45">
-            <option value="50">
           </datalist>
           <br></br>
           <br></br>
@@ -199,7 +201,6 @@
     <div class="slider-bar">
   </body>
 </html>
-
 
 
 

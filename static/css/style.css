@@ -35,3 +35,13 @@
 .navbar-custom .icon-bar {
     background-color:#33aa33;
 }
+
+#myDIV {
+    margin: auto;
+    border: 2px solid #e28e6a;
+    width: 700px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #e5c56e;
+    color: white;
+}

@@ -1,0 +1,102 @@
+2015	209.7	ED	Total	All ED Visits
+2015	nan	ED	Age	Age <1 Year
+2015	121.0	ED	Age	Age 1-24 Years
+2015	423.7	ED	Age	Age 25-44 Years
+2015	187.0	ED	Age	Age 45-64 Years
+2015	84.8	ED	Age	Age 65+ Years
+2015	222.9	ED	Sex	Males
+2015	197.2	ED	Sex	Females
+2015	248.7	ED	Community-Level Income	Income Quartile 1 (Lowest)
+2015	208.3	ED	Community-Level Income	Income Quartile 2 (2nd Lowest)
+2015	171.0	ED	Community-Level Income	Income Quartile 3 (2nd Highest)
+2015	115.5	ED	Community-Level Income	Income Quartile 4 (Highest)
+2015	126.2	ED	Patient Location	Large Central Metropolitan
+2015	216.1	ED	Patient Location	Large Fringe Metropolitan
+2015	253.4	ED	Patient Location	Medium Metropolitan
+2015	212.3	ED	Patient Location	Small Metropolitan
+2015	210.7	ED	Patient Location	Rural
+2015	255.8	IP	Total	All Inpatient Stays
+2015	48.3	IP	Age	Age <1 Year
+2015	81.4	IP	Age	Age 1-24 Years
+2015	385.2	IP	Age	Age 25-44 Years
+2015	319.3	IP	Age	Age 45-64 Years
+2015	309.5	IP	Age	Age 65+ Years
+2015	235.6	IP	Sex	Males
+2015	274.7	IP	Sex	Females
+2015	322.8	IP	Community-Level Income	Income Quartile 1 (Lowest)
+2015	240.9	IP	Community-Level Income	Income Quartile 2 (2nd Lowest)
+2015	201.4	IP	Community-Level Income	Income Quartile 3 (2nd Highest)
+2015	120.6	IP	Community-Level Income	Income Quartile 4 (Highest)
+2015	133.6	IP	Patient Location	Large Central Metropolitan
+2015	291.4	IP	Patient Location	Large Fringe Metropolitan
+2015	307.7	IP	Patient Location	Medium Metropolitan
+2015	225.7	IP	Patient Location	Small Metropolitan
+2015	277.1	IP	Patient Location	Rural
+2014	178.4	ED	Total	All ED Visits
+2014	nan	ED	Age	Age <1 Year
+2014	109.6	ED	Age	Age 1-24 Years
+2014	351.0	ED	Age	Age 25-44 Years
+2014	157.5	ED	Age	Age 45-64 Years
+2014	73.1	ED	Age	Age 65+ Years
+2014	187.8	ED	Sex	Males
+2014	169.5	ED	Sex	Females
+2014	216.2	ED	Community-Level Income	Income Quartile 1 (Lowest)
+2014	176.5	ED	Community-Level Income	Income Quartile 2 (2nd Lowest)
+2014	129.1	ED	Community-Level Income	Income Quartile 3 (2nd Highest)
+2014	99.8	ED	Community-Level Income	Income Quartile 4 (Highest)
+2014	101.3	ED	Patient Location	Large Central Metropolitan
+2014	183.1	ED	Patient Location	Large Fringe Metropolitan
+2014	211.8	ED	Patient Location	Medium Metropolitan
+2014	175.8	ED	Patient Location	Small Metropolitan
+2014	190.4	ED	Patient Location	Rural
+2014	220.0	IP	Total	All Inpatient Stays
+2014	46.3	IP	Age	Age <1 Year
+2014	78.4	IP	Age	Age 1-24 Years
+2014	333.6	IP	Age	Age 25-44 Years
+2014	273.1	IP	Age	Age 45-64 Years
+2014	247.8	IP	Age	Age 65+ Years
+2014	198.8	IP	Sex	Males
+2014	240.0	IP	Sex	Females
+2014	279.1	IP	Community-Level Income	Income Quartile 1 (Lowest)
+2014	224.5	IP	Community-Level Income	Income Quartile 2 (2nd Lowest)
+2014	143.8	IP	Community-Level Income	Income Quartile 3 (2nd Highest)
+2014	92.4	IP	Community-Level Income	Income Quartile 4 (Highest)
+2014	106.4	IP	Patient Location	Large Central Metropolitan
+2014	245.1	IP	Patient Location	Large Fringe Metropolitan
+2014	259.8	IP	Patient Location	Medium Metropolitan
+2014	201.3	IP	Patient Location	Small Metropolitan
+2014	251.9	IP	Patient Location	Rural
+2013	162.6	ED	Total	All ED Visits
+2013	nan	ED	Age	Age <1 Year
+2013	104.3	ED	Age	Age 1-24 Years
+2013	311.4	ED	Age	Age 25-44 Years
+2013	144.9	ED	Age	Age 45-64 Years
+2013	67.1	ED	Age	Age 65+ Years
+2013	169.8	ED	Sex	Males
+2013	155.8	ED	Sex	Females
+2013	193.5	ED	Community-Level Income	Income Quartile 1 (Lowest)
+2013	157.3	ED	Community-Level Income	Income Quartile 2 (2nd Lowest)
+2013	109.5	ED	Community-Level Income	Income Quartile 3 (2nd Highest)
+2013	75.8	ED	Community-Level Income	Income Quartile 4 (Highest)
+2013	89.3	ED	Patient Location	Large Central Metropolitan
+2013	202.1	ED	Patient Location	Large Fringe Metropolitan
+2013	148.2	ED	Patient Location	Medium Metropolitan
+2013	160.6	ED	Patient Location	Small Metropolitan
+2013	186.4	ED	Patient Location	Rural
+2013	208.5	IP	Total	All Inpatient Stays
+2013	37.6	IP	Age	Age <1 Year
+2013	81.4	IP	Age	Age 1-24 Years
+2013	310.7	IP	Age	Age 25-44 Years
+2013	258.3	IP	Age	Age 45-64 Years
+2013	233.2	IP	Age	Age 65+ Years
+2013	188.3	IP	Sex	Males
+2013	227.7	IP	Sex	Females
+2013	247.2	IP	Community-Level Income	Income Quartile 1 (Lowest)
+2013	200.7	IP	Community-Level Income	Income Quartile 2 (2nd Lowest)
+2013	133.1	IP	Community-Level Income	Income Quartile 3 (2nd Highest)
+2013	86.8	IP	Community-Level Income	Income Quartile 4 (Highest)
+2013	134.6	IP	Patient Location	Large Central Metropolitan
+2013	228.5	IP	Patient Location	Large Fringe Metropolitan
+2013	189.5	IP	Patient Location	Medium Metropolitan
+2013	176.2	IP	Patient Location	Small Metropolitan
+2013	240.2	IP	Patient Location	Rural

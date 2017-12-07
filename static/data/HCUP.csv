@@ -1,0 +1,24 @@
+209.7,ED,Total,All ED Visits
+0,ED,Age,1
+121,ED,Age,2
+423.7,ED,Age,3
+187,ED,Age,4
+84.8,ED,Age,5
+222.9,ED,Sex,1
+197.2,ED,Sex,2
+248.7,ED,Community-Level Income,1
+208.3,ED,Community-Level Income,2
+171,ED,Community-Level Income,3
+115.5,ED,Community-Level Income,4
+255.8,IP,Total,All Inpatient Stays
+48.3,IP,Age,1
+81.4,IP,Age,2
+385.2,IP,Age,3
+319.3,IP,Age,4
+309.5,IP,Age,5
+235.6,IP,Sex,1
+274.7,IP,Sex,2
+322.8,IP,Community-Level Income,1
+240.9,IP,Community-Level Income,2
+201.4,IP,Community-Level Income,3
+120.6,IP,Community-Level Income,4

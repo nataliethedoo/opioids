@@ -3,6 +3,7 @@ from flask import Flask, render_template,jsonify,request, redirect,url_for, sess
 import sys
 import json
 from service import painscore
+from hcup_reader import processdata
 
 app = Flask(__name__)
 
@@ -28,9 +29,10 @@ def getData():
 	zip_code = int(data['zip'])
 	#output = multiply(input)
 	pain = painscore(morphine)
+	hcup_score = processdata(age,income,sex) * 100
 	lst = getInfo(sex,age,race,income,ins)
 	#print request.form.get
-	return render_template('seesaw.html', f=fname, l=lname, number=pain, m=morphine, z=zip_code, s=lst[0], a=lst[1], r=lst[2], inc=lst[3], insurance=lst[4])
+	return render_template('seesaw.html', hcup=hcup_score, f=fname, l=lname, number=pain, m=morphine, z=zip_code, s=lst[0], a=lst[1], r=lst[2], inc=lst[3], insurance=lst[4])
 def getInfo(sex, age, race, income, ins):
 	sex_dict = {1: "Male", 2: "Female"}
 	age_dict = {2:"12-14", 3:"15-17", 4:"18-20",5:"21-24",6:"25-29",7:"30-34",8:"35-39",9:"40-44",10:"45-49",11:"50-54",12:"55 and above"}
@@ -38,6 +40,7 @@ def getInfo(sex, age, race, income, ins):
 	income_dict = {1:"Poor/Negative Income", 2:"Almost poor",3:"Low",4:"Middle",5:"High"}
 	ins_dict = {1:"Private",2:"Medicaid",3:"Medicare",4:"None",-9:"Unknown"}
 	return [sex_dict[sex], age_dict[age], race_dict[race], income_dict[income], ins_dict[ins]]
+
 
 
 @app.route("/getLogin", methods=["POST"])

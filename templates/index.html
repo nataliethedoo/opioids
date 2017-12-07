@@ -1,70 +1,180 @@
-{% extends "layout.html" %} {% block body %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="buzz_wrapper">
-      <div class="text">
-        <span><div id="msg"/></span>
-      </div>
-      <div class="scanline"></div>
+<!doctype html>
+<html>
+  <head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='plugins/bootstrap.min.css') }}">
+    <style> 
+    body {
+      padding-left:50px;
+      padding-right:50px;
+    }
+    </style>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='plugins/animate/animate.css') }}">
+<!--     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"> -->
+  </head>
+
+  <nav class="navbar navbar-default" style="margin-left: -50px; margin-right: -50px; background-color: #004F98">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="padding: 0px">
+        <img alt="Brand" src="static/images/hhs.png" style="height:50px">
+      </a>
     </div>
-    <div id="maintitle" class="title">The Cube <img id="logo_mask" src="/static/images/logo_mask_small.png"></div>
-    <div id="subtitle" class="title">Duke's Entrepreneurship SLG</div>
-    <div class="row" id="cubeRow">
-      <div id="cube"></div>
-    </div>
-    <div class="row mycontent">
-      <div class="row">
-        <div class="col-md-4 resource">
-          <div class="row">
-            <div id="coolcube"></div>
-          </div>
-          <h1 class="resourcetitle"><br>Mentorship</h1>
-          <p>The Cube has an extensive <a href="/alum">alumni</a> network that have advised undergraduate Cube members in building their own companies.</p>
-        </div>
-        <div class="col-md-4 resource">
-          <div class="row">
-            <div id="gear"></div>
-          </div>
-          <h1 class="resourcetitle"><br>Resources</h1>
-          <p>Duke holds a startup challenges and has the Melissa & Doug Entrepreneurship program, both of which a number of Cube members have participated in.</p>
-        </div>
-        <div class="col-md-4 resource">
-          <div class="row">
-            <div id="squarehere"></div>
-          </div>
-          <h1 class="resourcetitle"><br>Community</h1>
-          <p>We are a community of economists, business developers, engineers, computer scientists, and more. We support each other whether that be through technical help for a new startup idea or simply advice on how to approach implementation.</p>
-        </div>
-      </div>
-      {% include 'contact.html' %}
-    </div>
+    <form class="navbar-form navbar-right form-login" action="/getLogin" method="post">
+      <div class="form-group">
+        <input name="username" type="username" class="form-control" placeholder="Username">
+        <input name="password" type="password" class="form-control" placeholder="Password">
+      </div>       
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
   </div>
+  </nav>
 
-</div>
-{% endblock %} {% block scripts %}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/cube.js') }}"></script>
-<script>
-$(document).ready(function() {
-  triggerAnimation();
-  //localStorage.removeItem("first_time");
-  var firstTime = localStorage.getItem("first_time");
-  if (!firstTime) {
-    // first time loaded!
-    localStorage.setItem("first_time", "1");
+  <body>
+    
+    <div class="container-fluid" style="height:20%; background-color: #DCDCDC; border-radius: 10px">
 
-    render(0.001);
+      <h1>Opioid Risk Predictor</h1>
 
-    setTimeout(function() {
-      $("#cube").fadeOut(1000, function() {
-        cancelAnimationFrame(cubeAnimationID);
-        initialContent();
-      });
-    }, 1000);
-  } else {
-    $("#cube").remove();
-    initialContent();
-  }
-});
-</script>
-{% endblock %}
+      <p>Enter demographic information and intended prescription parameters to calculate patient risk score</p>
+      <p><a class="btn btn-warning btn-large" href="/selectPatient">Select Patient &raquo;</a></p>
+    </div><!-- /.jumbotron -->
+    <p></p>
+    <div class="body-content">
+      <div class="my-row">
+
+        <div class="col-lg-4" style="background-color: #c9f0f2; border-radius: 10px">
+          <h3>Demographic Information</h3>
+          <p> For new patients </p>
+
+<!-- Check with Rob on age values -->
+          <form action="getData" method="get">
+            <div class="form-group">
+              <div class="input-group">
+                <select id="age" name="age" class="selectpicker form-control"> 
+                  <option value="" disabled="disabled" selected="selected">Age</option>
+                  <option value="2"> 12-14 </option>
+                  <option value="3"> 15-17 </option>
+                  <option value="4"> 18-20 </option>
+                  <option value="5"> 21-24 </option>
+                  <option value="6"> 25-29 </option>
+                  <option value="7"> 30-34 </option>
+                  <option value="8"> 35-39 </option>
+                  <option value="9"> 40-44 </option>
+                  <option value="10"> 45-49 </option>
+                  <option value="11"> 50-54 </option>
+                  <option value="12"> 55 and Above </option>
+                </select> 
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <select name="sex" class="selectpicker form-control"> 
+                  <option value="" disabled="disabled" selected="selected">Sex</option>
+                  <option value="1"> Male </option>
+                  <option value="2"> Female </option>
+                </select> 
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <select name="race" class="selectpicker form-control"> 
+                  <option value="" disabled="disabled" selected="selected">Race</option>
+                  <option value="4"> Black </option>
+                  <option value="3"> Hispanic </option>
+                  <option value="5"> White </option>
+                  <option value="0"> Other </option>
+                </select> 
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <select name="income" class="selectpicker form-control"> 
+                  <option value="" disabled="disabled" selected="selected">Income</option>
+                  <option value="1"> Poor/Negative Income </option>
+                  <option value="2"> Almost poor </option>
+                  <option value="3"> Low </option>
+                  <option value="4"> Middle </option>
+                  <option value="5"> High </option>
+                </select> 
+              </div>
+            </div>
+
+<!--Check with Rob on insurance values -->
+            <div class="form-group">
+              <div class="input-group">
+                <select name="insurance" class="selectpicker form-control"> 
+                  <option value="" disabled="disabled" selected="selected">Insurance</option>
+                  <option value="2"> Medicaid </option>
+                  <option value="3"> Medicare </option>
+                  <option value="1"> Private </option>
+                  <option value="-9"> Unknown </option>
+                  <option value="4"> None </option>
+                </select> 
+              </div>
+            </div>
+
+          <p></p>
+          <div class="input-group">
+            <input name="zip" type="text" class="form-control" placeholder="Enter Zip Code">
+          </div>
+          <br></br>
+        </div>
+        
+        <div class="col-lg-4">
+          <h3>Prescription Parameters</h3>
+          <p>Number of prescriptions</p>
+          <p> &thinsp; 0 &emsp; &ensp; &thinsp; 1 &emsp; &ensp; &thinsp; 2 &emsp; &ensp; &thinsp; 3 &emsp; &ensp; &thinsp; 4 &emsp; &ensp; &thinsp; 5 &emsp; &ensp; &thinsp; 6 &emsp; &ensp; &thinsp; 7 &emsp; &ensp; &thinsp; 8 &emsp; &ensp; &thinsp; 9 &emsp; &ensp;10</p>
+          <input name="num-prescription" type="range", min="0", max="10", list="tickmarks">
+          <datalist id="tickmarks">
+            <option value="0">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
+            <option value="10">
+          </datalist>
+          <p></p>
+          <p>Number of pills</p>
+          <p> &thinsp; 0 &emsp; &ensp; &thinsp; 1 &emsp; &ensp; &thinsp; 2 &emsp; &ensp; &thinsp; 3 &emsp; &ensp; &thinsp; 4 &emsp; &ensp; &thinsp; 5 &emsp; &ensp; &thinsp; 6 &emsp; &ensp; &thinsp; 7 &emsp; &ensp; &thinsp; 8 &emsp; &ensp; &thinsp; 9 &emsp; &ensp;10</p>
+          <input name="num-pills" type="range", min="0", max="10", list="tickmarks">
+        <p></p>
+        <input type="submit" value="Submit">
+        </form>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <p></p>
+        </div>
+      
+
+
+        <div class="col-lg-4" style="background-color: #c9f0f2; border-radius: 10px">
+          <h3>Patient Risk Prediction</h3>
+          <p>Display graphs or output</p>
+          <p><a href="http://wtforms.simplecodes.com/" class="btn btn-default">Official website &raquo;</a></p>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        </div>
+      </div>
+    </div> 
+
+    <div class="slider-bar">
+  </body>
+
+
+
+

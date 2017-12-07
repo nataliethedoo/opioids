@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='plugins/bootstrap.min.css') }}">
+    <style> 
+    body {
+      padding-left:50px;
+      padding-right:50px;
+    }
+    </style>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='plugins/animate/animate.css') }}">
+<!--     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"> -->
+  </head>
+
+  <nav class="navbar navbar-default" style="margin-left: -50px; margin-right: -50px; background-color: #004F98">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" style="padding: 0px">
+        <img alt="Brand" src="static/images/hhs.png" href="/" style="height:50px">
+      </a>
+    </div>
+    <form class="navbar-form navbar-right form-login" action="/getLogin" method="post">
+      <div class="form-group">
+        <input name="username" type="username" class="form-control" placeholder="Username">
+        <input name="password" type="password" class="form-control" placeholder="Password">
+      </div>       
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+  </nav>
+
+    <style> 
+    #myDIV {
+        margin: auto;
+        border: 2px solid #e28e6a;
+        width: 700px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #e5c56e;
+        color: white;
+    }
+    </style>
+  </head>
+<body>
+
+<br></br>
+
+<button onclick="myFunction()">Try it</button>
+
+
+
+<script>
+function myFunction() {
+    // Code for Safari
+    document.getElementById("myDIV").style.WebkitTransform = "rotate(20deg)"; 
+    // Code for IE9
+    document.getElementById("myDIV").style.msTransform = "rotate(20deg)"; 
+    // Standard syntax
+    document.getElementById("myDIV").style.transform = "rotate(20deg)"; 
+}
+</script>
+
+<p><b>Note:</b> Internet Explorer 9 supports an alternative, the msTransform property. Newer versions of IE and Edge support the transform property (do not need the ms prefix).</p>
+<p><b>Note:</b> Safari supports an alternative, the WebkitTransform property.</p>
+
+</body>
+</html>
